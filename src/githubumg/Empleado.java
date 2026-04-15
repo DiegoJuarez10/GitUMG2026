@@ -13,18 +13,22 @@ public class Empleado {
     String nombre;
     String apellido;
     String direccion;
+    double salario;
     
     public Empleado(){
         this.id = 0;
         this.nombre= "";
         this.apellido = "";
         this.direccion = "";
+        this.salario = 0;
     }
-    public Empleado(int id, String nombre, String apellido, String direccion){
+    public Empleado(int id, String nombre, String apellido, String direccion, double salario){
         this.id = id;
         this.nombre= nombre;
         this.apellido=apellido;
-        this.direccion = "";
+        this.direccion = direccion;
+        this.salario = salario;
+        
               
     }
 
@@ -59,5 +63,20 @@ public class Empleado {
     public void setDireccion(String direccion) {
         this.direccion = direccion;
     }
+
+    public double getSalario() {
+        return salario;
+    }
+
+    public void setSalario(double salario) {
+        this.salario = salario;
+    }
     
+    public void calculo(){
+        double impuesto;
+                if (this.salario > 5000){
+            impuesto = this.salario - 200;
+            System.out.println("Se le resto Q200 de impuestos: " + impuesto);
+        }
+    }
 }
