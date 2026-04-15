@@ -78,5 +78,12 @@ public class Empleado {
             impuesto = this.salario - 200;
             System.out.println("Se le resto Q200 de impuestos: " + impuesto);
         }
+                
     }
+
+    @Override
+    public String toString() {
+        return "Empleado{" + "id=" + id + ", nombre=" + nombre + ", apellido=" + apellido + ", direccion=" + direccion + ", salario=" + salario +'}';
+    }
+    
 }
